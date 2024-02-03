@@ -1,0 +1,33 @@
+---
+import "@fontsource/poppins/400.css";
+import "@fontsource/poppins/500.css";
+import "@fontsource/poppins/600.css";
+import "@fontsource/poppins/700.css";
+import "@fontsource/poppins/800.css";
+import "@fontsource/poppins/900.css";
+import Header from '../components/Header.astro';
+const { title } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Header/>
+    <slot/>
+  </body>
+</html>
+</html>
+
+<style>
+	body {
+		font-family: 'poppins', 'sans-serif';
+		background-color: #f5f5f5;
+    color-scheme: 'dark', 'light';
+	}
+</style>

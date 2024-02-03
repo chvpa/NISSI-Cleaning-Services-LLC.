@@ -1,0 +1,60 @@
+---
+import HeroButton from "./HeroButton.astro";
+import Email from "./Icons/Email.astro";
+import Facebook from "./Icons/Facebook.astro";
+import Phone from "./Icons/Phone.astro";
+import WhatsApp from "./Icons/WhatsApp.astro";
+import MapIcon from "./MapIcon.astro";
+---
+
+<!-- Hero section -->
+
+<section class="top-0 bottom-0 bg-cover bg-center flex flex-col px-8 h-screen overflow-hidden"
+style="background-image: url('./bg2.jpg');">
+    
+    <!-- Left Content Box -->
+
+    <article class="container flex flex-col justify-center pt-56 h-screen lg:w-[700px] lg:">
+    
+            <!-- New jersey heading -->
+    <div class="flex flex-col justify-center">
+        <div class="flex items-center gap-1">
+            <div>
+                <MapIcon/>
+            </div>
+            <h4 class="text-white">
+                New jersery
+            </h4>
+        </div>
+
+                <!-- Heading -->
+
+        <div class="pt-4">
+            <h2 class="text-[1.5em] text-white">Residential & Commercial</h2>
+            <h1 class="leading-[1em] font-extrabold text-transparent text-[4em] bg-clip-text bg-gradient-to-r from-sky-200 to-sky-300">Cleaning Experts.</h1>
+        </div>
+    
+                <!-- Paragraph -->
+
+        <p class="py-8 text-white">
+            Experience Unrivaled Cleanliness in Every Space! Entrust Your Home or Business to the Expert Touch of NISSI Cleaning Services. Schedule a Spotless Transformation Today!
+        </p>
+    </div>
+
+    <!-- Request a Free Estimation -->
+    <div class="relative container flex flex-grow flex-col gap-8 justify-end">
+        <div>
+            <HeroButton/>
+        </div>
+        
+    <!-- Social Media Icons -->
+
+        <div class="flex flex-row justify-center md:justify-start gap-2 pb-16">
+            <WhatsApp/>
+            <Facebook/>
+            <Email/>
+            <Phone/>
+        </div>
+    </div>
+    </article>
+</section>
