@@ -1,10 +1,16 @@
 ---
+import Cards from "../Cards.astro";
+import FeaturesCards from "../FeaturesCards.astro";
 import Arrow from "../Icons/Arrow.astro";
 import Check from "../Icons/Check.astro";
+import Construction from "../Icons/Construction.astro";
 import Home from "../Icons/Home.astro";
+import OfficeIcon from "../Icons/OfficeIcon.astro";
+import Window from "../Icons/Window.astro";
 ---
 
-<section class="bg-white flex flex-col pt-8 px-8 h-screen">
+<section class=" bg-auto bg-center flex flex-col pt-8 px-8 h-screen"
+style="background-image: url('./features-bg.jpg');">
 
     <!-- Heading -->
 
@@ -31,57 +37,44 @@ import Home from "../Icons/Home.astro";
 
     <div class="py-12 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 h-screen">
 
-        <!-- Card -->
-        <div> 
-            <div class="bg-gray-100 py-8 px-8 rounded-lg min-w-[50px]">
-                <div class="flex flex-col gap-4">
-                    <span>
-                        <Home/>
-                    </span>
-                    <h2 class="text-2xl font-bold">Home Cleaning</h2>
-                    <ul>
-                        <li class="flex gap-3 items start">
-                            <span>
-                                <Check/>
-                            </span>
-                            Pimero Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                        </li>
-                        <li class="flex gap-3 items-center">
-                            <span>
-                                <Check/>
-                            </span>
-                            Pimero
-                        </li>
-                        <li class="flex gap-3 items-center">
-                            <span>
-                                <Check/>
-                            </span>
-                            Pimero
-                        </li>
-                        <li class="flex gap-3 items-center">
-                            <span>
-                                <Check/>
-                            </span>
-                            Pimero
-                        </li>
-                        <li class="flex gap-3 items-center">
-                            <span>
-                                <Check/>
-                            </span>
-                            Pimero
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <!-- Card -->
-        <div class="bg-gray-900">content</div>
-        <div class="bg-gray-900">content</div>
-        <div class="bg-gray-900">content</div>
-        <div class="bg-gray-900">content</div>
-        <div class="bg-gray-900">content</div>
-        <div class="bg-gray-900">content</div>
-        <div class="bg-gray-900">content</div>
+        <!-- Home Cleaning -->
+
+        <Cards tittle="Home Cleaning.">
+            <Home slot="icon"/>
+                <FeaturesCards slot="item" paragraph="Bathroom Cleaning."/>
+                <FeaturesCards slot="item" paragraph="Kitchen Cleaning."/>
+                <FeaturesCards slot="item" paragraph="Bedrooms Cleaning."/>
+                <FeaturesCards slot="item" paragraph="Living Rooms Cleaning."/>
+                <FeaturesCards slot="item" paragraph="Garaje Cleaning."/>
+        </Cards>
+
+        <!-- Office Cleaning -->
+
+        <Cards tittle="Office Cleaning.">
+            <OfficeIcon slot="icon"/>
+                <FeaturesCards slot="item" paragraph="Individual Offices."/>
+                <FeaturesCards slot="item" paragraph="Reception And Waiting Areas."/>
+                <FeaturesCards slot="item" paragraph="Meeting Rooms."/>
+                <FeaturesCards slot="item" paragraph="Common Areas."/>
+        </Cards>      
+
+        <!-- Post Construction Cleaning -->
+
+        <Cards tittle="Window cleaning.">
+            <Construction slot="icon"/>
+                <FeaturesCards slot="item" paragraph="Waste Dipostal."/>
+                <FeaturesCards slot="item" paragraph="Surface Cleaning."/>
+                <FeaturesCards slot="item" paragraph="Detailed clean."/>
+        </Cards>    
+
+        <!--    Window Cleaning  -->
+
+            <Cards tittle="Window cleaning.">
+                <Window slot="icon"/>
+                <FeaturesCards slot="item" paragraph="Interior Cleaning."/>
+                <FeaturesCards slot="item" paragraph="Exterior Cleaning."/>
+            </Cards>
+
     </div>
     <!-- boxes -->
 

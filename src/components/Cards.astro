@@ -1,0 +1,15 @@
+---
+const { tittle } = Astro.props;
+---
+
+<div class="bg-white py-8 px-8 rounded-lg">
+    <div class="flex flex-col gap-4">
+        <span>
+            <slot name="icon"/>
+        </span>
+        <h2 class="text-2xl font-bold">{tittle}</h2>
+        <ul>
+            <slot name="item"/>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+---
+import Check from "./Icons/Check.astro";
+
+const { paragraph } = Astro.props;
+---
+
+<li class="flex gap-3 items-start">
+    <span>
+        <Check/>
+    </span>
+    <p>{paragraph}</p>
+</li>
