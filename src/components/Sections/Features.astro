@@ -1,5 +1,7 @@
 ---
 import Arrow from "../Icons/Arrow.astro";
+import Check from "../Icons/Check.astro";
+import Home from "../Icons/Home.astro";
 ---
 
 <section class="flex flex-col justify-center pt-8 px-8 h-screen">
@@ -27,8 +29,52 @@ import Arrow from "../Icons/Arrow.astro";
 
     </div>
 
-    <div class="py-12 grid md:grid-cols-2 lg:grid-cols-4 gap-4 h-screen [&>div]:rounded-lg">
-        <div class="bg-gray-900">content</div>
+    <div class="py-12 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 h-screen">
+
+        <!-- Card -->
+        <div> 
+            <div class="bg-white py-8 px-8 rounded-lg min-w-[50px]">
+                <div class="flex flex-col gap-4">
+                    <span>
+                        <Home/>
+                    </span>
+                    <h2 class="text-2xl font-bold">Home Cleaning</h2>
+                    <ul>
+                        <li class="flex gap-3 items start">
+                            <span>
+                                <Check/>
+                            </span>
+                            Pimero Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        </li>
+                        <li class="flex gap-3 items-center">
+                            <span>
+                                <Check/>
+                            </span>
+                            Pimero
+                        </li>
+                        <li class="flex gap-3 items-center">
+                            <span>
+                                <Check/>
+                            </span>
+                            Pimero
+                        </li>
+                        <li class="flex gap-3 items-center">
+                            <span>
+                                <Check/>
+                            </span>
+                            Pimero
+                        </li>
+                        <li class="flex gap-3 items-center">
+                            <span>
+                                <Check/>
+                            </span>
+                            Pimero
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Card -->
         <div class="bg-gray-900">content</div>
         <div class="bg-gray-900">content</div>
         <div class="bg-gray-900">content</div>
