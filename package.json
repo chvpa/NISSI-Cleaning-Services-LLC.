@@ -18,5 +18,10 @@
     "preact": "^10.19.3",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "install": "^0.13.0",
+    "npm": "^10.4.0",
+    "tailwindcss-animated": "^1.0.1"
   }
 }
