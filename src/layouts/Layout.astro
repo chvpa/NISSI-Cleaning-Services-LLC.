@@ -6,7 +6,6 @@ import "@fontsource/poppins/700.css";
 import "@fontsource/poppins/800.css";
 import "@fontsource/poppins/900.css";
 import Header from '../components/Sections/Header.astro';
-import HeaderDos from "../components/HeaderDos.astro";
 const { title } = Astro.props;
 ---
 
@@ -20,7 +19,7 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <HeaderDos client:load/> 
+    <Header/> 
     <slot/>
   </body>
 </html>
