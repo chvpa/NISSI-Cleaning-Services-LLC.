@@ -1,4 +1,5 @@
 ---
+import "photoswipe/style.css"
 ---
 
 <section id="our-work" class="bg-white px-12 py-16">
@@ -14,17 +15,33 @@
         </div>
     </div>
 
-        <div class=" grid lg:grid-cols-4 gap-3 sm:grid-cols-2 md:grid-cols-2 lg:gap-6 rounded-lg [&>img]:rounded-lg">
+    
 
-            <img class="object-cover h-full hover:drop-shadow-xl" src="./kitchen.avif" alt="">
-            <img class="object-cover h-full hover:drop-shadow-xl" src="./living-room-2.avif" alt="">
-            <img class="object-cover h-full hover:drop-shadow-xl" src="./bedroom-2.avif" alt="">
-            <img class="object-cover h-full hover:drop-shadow-xl" src="./bedroom-1.avif" alt="">
-            <img class="object-cover h-full hover:drop-shadow-xl" src="./bathroom-1.avif" alt="">
-            <img class="object-fill h-full hover:drop-shadow-xl" src="./kitchen-1.avif" alt="">
-            <img class="object-cover h-full hover:drop-shadow-xl" src="./garage.avif" alt="">
-            <img class="object-cover h-full hover:drop-shadow-xl" src="./kitchen-2.avif" alt="">
-
-        </div>
+    <div class="pswp-gallery grid grid-cols-4 mx-auto object-cover" id="gallery">
+        {
+            Array.from({ length: 1}).map((_, i) => (
+                <a 
+                href={`/public/gallery/img-${i + 1}.jpeg`}
+                target="_blank"
+                data-pswp-width="1875" 
+                data-pswp-height="2500" 
+                 data-cropped="true"
+                >
+                <img src={`/public/gallery/img-${i + 1}.jpeg`}
+                alt="">
+                </a>
+            ))
+        };
 </section>
+
+
+<script>
+    import PhotoSwipeLightBox from "photoswipe/lightbox"
+    const lightbox = new PhotoSwipeLightBox({
+      gallery: '#gallery',
+      children: 'a',
+      pswpModule: () => import('photoswipe')
+    });
+    lightbox.init();
+</script>
 
