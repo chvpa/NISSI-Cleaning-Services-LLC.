@@ -17,18 +17,20 @@ import "photoswipe/style.css"
 
     
 
-    <div class="pswp-gallery grid grid-cols-4 mx-auto object-cover" id="gallery">
+    <div class="pswp-gallery grid grid-cols-4 max-w-6xl mx-auto gap-4" id="gallery">
         {
-            Array.from({ length: 9}).map((_, i) => (
+            Array.from({ length: 32}).map((_, i) => (
                 <a 
-                href={`/public/gallery/img-1.jpeg`}
+                href={`/public/gallery/img-${i + 1}.webp`}
                 target="_blank"
                 data-pswp-width="1875" 
                 data-pswp-height="2500" 
                  data-cropped="true"
+                class="rounded-lg"
                 >
-                <img src={`/gallery/img-1.jpeg`}
-                alt="">
+                <img src={`/gallery/img-${i + 1}.webp`}
+                alt=""
+                class="rounded-lg">
                 </a>
             ))
         }
