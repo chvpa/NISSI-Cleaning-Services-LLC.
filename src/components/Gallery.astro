@@ -24,13 +24,12 @@ import "photoswipe/style.css"
                 href={`/public/gallery/img-${i + 1}.webp`}
                 target="_blank"
                 data-pswp-width="1875" 
-                data-pswp-height="2500" 
-                 data-cropped="true"
+                data-pswp-height="2500"
                 class="rounded-lg"
                 >
-                <img src={`/gallery/img-${i + 1}.webp`}
+                <img src={`/gallery/img-${i + 1}.jpg`}
                 alt=""
-                class="rounded-lg">
+                class="rounded-lg"> 
                 </a>
             ))
         }
@@ -39,7 +38,7 @@ import "photoswipe/style.css"
 
 
 <script>
-    import PhotoSwipeLightBox from "photoswipe/lightbox"
+    import PhotoSwipeLightBox from "photoswipe/lightbox";
     const lightbox = new PhotoSwipeLightBox({
       gallery: '#gallery',
       children: 'a',
