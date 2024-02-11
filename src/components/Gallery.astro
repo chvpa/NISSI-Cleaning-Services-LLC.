@@ -19,7 +19,7 @@ import "photoswipe/style.css"
 
     <div class="pswp-gallery grid grid-cols-4 mx-auto object-cover" id="gallery">
         {
-            Array.from({ length: 1}).map((_, i) => (
+            Array.from({ length: 9}).map((_, i) => (
                 <a 
                 href={`/public/gallery/img-${i + 1}.jpeg`}
                 target="_blank"
@@ -32,6 +32,7 @@ import "photoswipe/style.css"
                 </a>
             ))
         };
+    </div>
 </section>
 
 
