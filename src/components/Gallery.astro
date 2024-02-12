@@ -1,5 +1,5 @@
 ---
-import "photoswipe/style.css"
+import 'photoswipe/style.css';
 ---
 
 <section id="our-work" class="bg-white px-12 py-16">
@@ -15,35 +15,27 @@ import "photoswipe/style.css"
         </div>
     </div>
 
-    
+    <!-- Gallery -->
 
-    <div class="pswp-gallery grid grid-cols-4 max-w-6xl mx-auto gap-4" id="gallery">
-        {
-            Array.from({ length: 32}).map((_, i) => (
-                <a 
-                href={`/public/gallery/img-${i + 1}.webp`}
-                target="_blank"
-                data-pswp-width="1875" 
-                data-pswp-height="2500"
-                class="rounded-lg"
-                >
-                <img src={`/gallery/img-${i + 1}.jpg`}
-                alt=""
-                class="rounded-lg"> 
-                </a>
-            ))
-        }
-    </div>
+        <div id="my-gallery" class=" grid grid-cols-4">
+            <!-- cropped thumbnail: -->
+            <a class="h-[200px] w-[300px] overflow-hidden" href="/gallery/img-1.webp" 
+              data-pswp-width="1875" 
+              data-pswp-height="2500"
+              data-croped="true"
+              target="_blank">
+              <img class="h-[100%] w-[100%] object-cover" src="/gallery/img-1.webp" alt="" />
+            </a>
+        </div>
+
 </section>
 
-
 <script>
-    import PhotoSwipeLightBox from "photoswipe/lightbox";
-    const lightbox = new PhotoSwipeLightBox({
-      gallery: '#gallery',
-      children: 'a',
-      pswpModule: () => import('photoswipe')
+    import PhotoSwipeLightbox from 'photoswipe/lightbox';
+    const lightbox = new PhotoSwipeLightbox({
+    gallery: '#my-gallery',
+    children: 'a',
+    pswpModule: () => import('photoswipe')
     });
     lightbox.init();
 </script>
-
