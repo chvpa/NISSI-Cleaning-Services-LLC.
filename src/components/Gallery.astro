@@ -1,5 +1,6 @@
 ---
 import 'photoswipe/style.css';
+import Images from '../components/Images.astro';
 ---
 
 <section id="our-work" class="bg-white px-12 py-16">
@@ -17,15 +18,41 @@ import 'photoswipe/style.css';
 
     <!-- Gallery -->
 
-        <div id="my-gallery" class=" grid grid-cols-4">
-            <!-- cropped thumbnail: -->
-            <a class="rounded-xl h-[300px] w-[300px] overflow-hidden" href="/gallery/img-1.webp" 
-              data-pswp-width="1875" 
-              data-pswp-height="2500"
-              data-cropped="true"
-              target="_blank">
-              <img class="hover:-translate-y-1 hover:scale-110 duration-300 h-[100%] w-[100%] object-cover" src="/gallery/img-1.webp" alt="" />
-            </a>
+        <div id="my-gallery" class="grid grid-cols-2 lg:grid-cols-5 gap-2 lg:gap-4">
+                    <Images height="2500" width="1875" imgName="/gallery/img-1.webp"/>
+                    <Images height="1875" width="2500" imgName="/gallery/img-2.webp"/>
+                    <Images height="2500" width="1875" imgName="/gallery/img-3.webp"/>
+                    <Images height="1875" width="2500" imgName="/gallery/img-4.webp"/>
+                    <Images height="2500" width="1875" imgName="/gallery/img-5.webp"/>
+                    <Images height="2500" width="1875" imgName="/gallery/img-6.webp"/>
+                    <Images height="2500" width="1875" imgName="/gallery/img-7.webp"/>
+                    <Images height="2500" width="1875" imgName="/gallery/img-8.webp"/>
+                    <Images height="2500" width="1875" imgName="/gallery/img-9.webp"/>
+                    <Images height="2500" width="1875" imgName="/gallery/img-11.webp"/>
+                    <Images height="2500" width="1875" imgName="/gallery/img-12.webp"/>
+                    <Images height="1875" width="2500" imgName="/gallery/img-13.webp"/>
+                    <Images height="2500" width="1875" imgName="/gallery/img-15.webp"/>
+                    <Images height="2500" width="1875" imgName="/gallery/img-16.webp"/>
+                    <Images height="2500" width="1875" imgName="/gallery/img-17.webp"/>
+                    <Images height="1875" width="2500" imgName="/gallery/img-18.webp"/>
+                    <Images height="2500" width="1875" imgName="/gallery/img-19.webp"/>
+                    <Images height="2500" width="1875" imgName="/gallery/img-20.webp"/>
+                    <Images height="2500" width="1875" imgName="/gallery/img-21.webp"/>
+                    <Images height="1875" width="2500" imgName="/gallery/img-22.webp"/>
+                    <Images height="2500" width="1875" imgName="/gallery/img-23.webp"/>
+                    <Images height="2500" width="1875" imgName="/gallery/img-24.webp"/>
+                    <Images height="2500" width="1875" imgName="/gallery/img-25.webp"/>
+                    <Images height="2500" width="1875" imgName="/gallery/img-26.webp"/>
+                    <Images height="2500" width="1875" imgName="/gallery/img-27.webp"/>
+                    <Images height="1875" width="2500" imgName="/gallery/img-28.webp"/>
+                    <Images height="2500" width="1875" imgName="/gallery/img-29.webp"/>
+                    <Images height="2500" width="1875" imgName="/gallery/img-30.webp"/>
+                    <Images height="2500" width="1875" imgName="/gallery/img-31.webp"/>
+                    <Images height="2500" width="1875" imgName="/gallery/img-32.webp"/>
+                    <Images height="2500" width="1875" imgName="/gallery/img-33.webp"/>
+                    <Images height="2500" width="1875" imgName="/gallery/img-34.webp"/>
+                    <Images height="2500" width="1875" imgName="/gallery/img-35.webp"/>
+                    <Images height="2500" width="1875" imgName="/gallery/img-36.webp"/>
         </div>
 
 </section>
@@ -38,4 +65,5 @@ import 'photoswipe/style.css';
     pswpModule: () => import('photoswipe')
     });
     lightbox.init();
+    
 </script>
