@@ -1,13 +1,11 @@
 ---
-const { width } = Astro.props;
-const { height } = Astro.props;
-const { imgName } = Astro.props;
+const { width, height, imgName } = Astro.props;
 ---
 
-<a class="rounded-xl overflow-hidden " href={imgName} 
+<a class="aspect-square rounded-lg overflow-hidden" href={imgName} 
 data-pswp-width={width} 
 data-pswp-height={height}
 data-cropped="true"
 target="_blank">
-<img class="hover:-translate-y-1 hover:scale-110 duration-300 h-[100%] w-[100%] object-cover" src={imgName} alt="" />
+<img class="hover:-translate-y-1 hover:scale-110 hover:cursor-zoom-in duration-300 h-[100%] w-[100%] object-cover" src={imgName} alt="" />
 </a>
